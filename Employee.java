@@ -29,30 +29,30 @@ public class Employee{
     /**
      * Returns true is an employee is above 16 years old
      */
-    public boolean canDrive() {
-        int age = calculateAge(2025);
-        if (age >= 16) {
-            return true;
+    //public boolean canDrive() {
+        //int age = calculateAge(2025);
+        //if (age >= 16) {
+            //return true;
 
-        } else {
-            System.out.println("you can drive in" + (16 - age) + "years");
-            return false;
-        }
-    }
+        //} //else {
+            //System.out.println("you can drive in" + (16 - age) + "years");
+            //return false
+        //}
+    //}
 
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
-    private double calculatePay(){
+    //private double calculatePay(){
         // to be completed
-        double basePay = hourlyWage*unpaidHours;
-        double taxe = 0.30;
-        double deductedPay = basePay*taxe;
-        double totalPay = basePay - deductedPay;
-        return totalPay;
+        //basePay = hourlyWage*unpaidHours;
+        //taxe = 0.30;
+        //deductedPay = basePay*taxe;
+        //totalPay = basePay - deductedPay;
+        //return totalPay;
         
         
-    }
+    //}
     
     public String getName() {
         return fullname;
@@ -67,8 +67,8 @@ public class Employee{
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-        double amount = calculatePay();
-        System.out.println(fullname + " has received a wire tranfer of " + amount + " CAD");
-        unpaidHours = 0.0;
+        //amount = calculatePay();
+        //System.out.println(fullname + " has received a wire tranfer of " + amount + " CAD");
+        //unpaidHours = 0.0;
     }
 }
