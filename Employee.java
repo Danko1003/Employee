@@ -29,10 +29,15 @@ public class Employee{
     /**
      * Returns true is an employee is above 16 years old
      */
-    public boolean canDrive(){
+    public boolean canDrive() {
         int age = calculateAge(2025);
-        // to be completed
-        return false;
+        if (age >= 16) {
+            return true;
+
+        } else {
+            System.out.println("you can drive in" + (16 - age) + "years");
+            return false;
+        }
     }
 
     /*
@@ -40,14 +45,30 @@ public class Employee{
      */
     private double calculatePay(){
         // to be completed
-        double flip = 10.0;
-        return flip;
+        double basePay = hourlyWage*unpaidHours;
+        double taxe = 0.30;
+        double deductedPay = basePay*taxe;
+        double totalPay = basePay - deductedPay;
+        return totalPay;
+        
+        
     }
+    
+    public String getName() {
+        return fullname;
+    }
+    
+    public void setName(String fullname) {
+        this.fullname = fullname;
+    }
+    
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-        // to be completed
+        double amount = calculatePay();
+        System.out.println(fullname + " has received a wire tranfer of " + amount + " CAD");
+        unpaidHours = 0.0;
     }
 }
